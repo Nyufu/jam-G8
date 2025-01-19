@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ee478e3f-301e-4824-a1ab-daef5f5a92e2}</ProjectGuid>
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)_output\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)</OutDir>
+    <NMakeBuildCommandLine>jam_0 -sRoot=. -f jam_src/Jamfile</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(NMakeBuildCommandLine) clean_all</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>jam_0 -sRoot=. -f jam_src/Jamfile clean_all
+jam_0 -sRoot=. -f jam_src/Jamfile</NMakeReBuildCommandLine>
+    <NMakeOutput>$(OutDir)$(ProjectName).exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN64;_TARGET_PC=1;_TARGET_PC_WIN=1;asm=__asm;WIN32_LEAN_AND_MEAN=;_USE_MATH_DEFINES;NOMINMAX;_TARGET_SIMD_SSE=4;_ALLOW_KEYWORD_MACROS=;_USING_V110_SDK71_;DELAYIMP_INSECURE_WRITABLE_HOOKS;_TARGET_64BIT=1;i_strlen=(int)strlen;NT;DAGOR_DBGLEVEL=0;NDEBUG=1;_SECURE_SCL=0;_HAS_EXCEPTIONS=0;EA_COMPILER_NO_NOEXCEPT;_TARGET_STATIC_LIB=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)_output\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)</OutDir>
+    <NMakeBuildCommandLine>jam_0 -sRoot=. -f jam_src/Jamfile</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(NMakeBuildCommandLine) clean_all</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>jam_0 -sRoot=. -f jam_src/Jamfile clean_all
+jam_0 -sRoot=. -f jam_src/Jamfile</NMakeReBuildCommandLine>
+    <NMakeOutput>$(OutDir)$(ProjectName).exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN64;_TARGET_PC=1;_TARGET_PC_WIN=1;asm=__asm;WIN32_LEAN_AND_MEAN=;_USE_MATH_DEFINES;NOMINMAX;_TARGET_SIMD_SSE=4;_ALLOW_KEYWORD_MACROS=;_USING_V110_SDK71_;DELAYIMP_INSECURE_WRITABLE_HOOKS;_TARGET_64BIT=1;i_strlen=(int)strlen;NT;DAGOR_DBGLEVEL=0;NDEBUG=1;_SECURE_SCL=0;_HAS_EXCEPTIONS=0;EA_COMPILER_NO_NOEXCEPT;_TARGET_STATIC_LIB=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="jam_src\builtins.c" />
+    <ClCompile Include="jam_src\command.c" />
+    <ClCompile Include="jam_src\compile.c" />
+    <ClCompile Include="jam_src\execdmc.c" />
+    <ClCompile Include="jam_src\execmac.c" />
+    <ClCompile Include="jam_src\execunix.c" />
+    <ClCompile Include="jam_src\execvms.c" />
+    <ClCompile Include="jam_src\expand.c" />
+    <ClCompile Include="jam_src\filemac.c" />
+    <ClCompile Include="jam_src\filent.c" />
+    <ClCompile Include="jam_src\fileos2.c" />
+    <ClCompile Include="jam_src\fileunix.c" />
+    <ClCompile Include="jam_src\filevms.c" />
+    <ClCompile Include="jam_src\glob.c" />
+    <ClCompile Include="jam_src\hash.c" />
+    <ClCompile Include="jam_src\headers.c" />
+    <ClCompile Include="jam_src\jam.c" />
+    <ClCompile Include="jam_src\jambase.c" />
+    <ClCompile Include="jam_src\jamgram.c" />
+    <ClCompile Include="jam_src\lists.c" />
+    <ClCompile Include="jam_src\make.c" />
+    <ClCompile Include="jam_src\make1.c" />
+    <ClCompile Include="jam_src\mkjambase.c" />
+    <ClCompile Include="jam_src\newstr.c" />
+    <ClCompile Include="jam_src\option.c" />
+    <ClCompile Include="jam_src\outFilter.c" />
+    <ClCompile Include="jam_src\parse.c" />
+    <ClCompile Include="jam_src\pathmac.c" />
+    <ClCompile Include="jam_src\pathunix.c" />
+    <ClCompile Include="jam_src\pathvms.c" />
+    <ClCompile Include="jam_src\regexp.c" />
+    <ClCompile Include="jam_src\rules.c" />
+    <ClCompile Include="jam_src\scan.c" />
+    <ClCompile Include="jam_src\search.c" />
+    <ClCompile Include="jam_src\timestamp.c" />
+    <ClCompile Include="jam_src\variable.c" />
+    <ClCompile Include="jam_src\win32spawnl.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jam_src\builtins.h" />
+    <ClInclude Include="jam_src\command.h" />
+    <ClInclude Include="jam_src\compile.h" />
+    <ClInclude Include="jam_src\execcmd.h" />
+    <ClInclude Include="jam_src\expand.h" />
+    <ClInclude Include="jam_src\filesys.h" />
+    <ClInclude Include="jam_src\hash.h" />
+    <ClInclude Include="jam_src\headers.h" />
+    <ClInclude Include="jam_src\jam.h" />
+    <ClInclude Include="jam_src\jambase.h" />
+    <ClInclude Include="jam_src\jamgram.h" />
+    <ClInclude Include="jam_src\jamgramtab.h" />
+    <ClInclude Include="jam_src\lists.h" />
+    <ClInclude Include="jam_src\make.h" />
+    <ClInclude Include="jam_src\newstr.h" />
+    <ClInclude Include="jam_src\option.h" />
+    <ClInclude Include="jam_src\outFilter.h" />
+    <ClInclude Include="jam_src\parse.h" />
+    <ClInclude Include="jam_src\patchlevel.h" />
+    <ClInclude Include="jam_src\pathsys.h" />
+    <ClInclude Include="jam_src\regexp.h" />
+    <ClInclude Include="jam_src\rules.h" />
+    <ClInclude Include="jam_src\scan.h" />
+    <ClInclude Include="jam_src\search.h" />
+    <ClInclude Include="jam_src\timestamp.h" />
+    <ClInclude Include="jam_src\variable.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

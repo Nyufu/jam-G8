@@ -1,5 +1,8 @@
 # ignore build files
+.vs/
 _output/
 build/
 jam
 jam.debuginfo
+
+**/*.vcxproj.user
